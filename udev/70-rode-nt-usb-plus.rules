@@ -1,0 +1,3 @@
+# RØDE NT-USB+ (19f7:0035): let the logged-in user access the vendor HID
+# control interface. Must sort before 73-seat-late.rules for uaccess to apply.
+KERNEL=="hidraw*", SUBSYSTEM=="hidraw", ATTRS{idVendor}=="19f7", ATTRS{idProduct}=="0035", TAG+="uaccess"
