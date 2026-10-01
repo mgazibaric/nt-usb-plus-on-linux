@@ -1,0 +1,1532 @@
+[
+{
+"effect": "compressor",
+"field": "threshold",
+"value": -60.0,
+"hex": "0000fd7f"
+},
+{
+"effect": "compressor",
+"field": "threshold",
+"value": -56.25,
+"hex": "00002f58"
+},
+{
+"effect": "compressor",
+"field": "threshold",
+"value": -52.5,
+"hex": "0000f440"
+},
+{
+"effect": "compressor",
+"field": "threshold",
+"value": -48.75,
+"hex": "00008531"
+},
+{
+"effect": "compressor",
+"field": "threshold",
+"value": -45.0,
+"hex": "00007d26"
+},
+{
+"effect": "compressor",
+"field": "threshold",
+"value": -41.25,
+"hex": "00003c1e"
+},
+{
+"effect": "compressor",
+"field": "threshold",
+"value": -37.5,
+"hex": "0000dc17"
+},
+{
+"effect": "compressor",
+"field": "threshold",
+"value": -33.75,
+"hex": "0000d312"
+},
+{
+"effect": "compressor",
+"field": "threshold",
+"value": -30.0,
+"hex": "0000c70e"
+},
+{
+"effect": "compressor",
+"field": "threshold",
+"value": -26.25,
+"hex": "00007d0b"
+},
+{
+"effect": "compressor",
+"field": "threshold",
+"value": -22.5,
+"hex": "0000ca08"
+},
+{
+"effect": "compressor",
+"field": "threshold",
+"value": -18.75,
+"hex": "00009006"
+},
+{
+"effect": "compressor",
+"field": "threshold",
+"value": -15.0,
+"hex": "0000b804"
+},
+{
+"effect": "compressor",
+"field": "threshold",
+"value": -11.25,
+"hex": "00002f03"
+},
+{
+"effect": "compressor",
+"field": "threshold",
+"value": -7.5,
+"hex": "0000ea01"
+},
+{
+"effect": "compressor",
+"field": "threshold",
+"value": -3.75,
+"hex": "0000dd00"
+},
+{
+"effect": "compressor",
+"field": "threshold",
+"value": 0.0,
+"hex": "00000000"
+},
+{
+"effect": "compressor",
+"field": "ratio",
+"value": 1.5,
+"hex": "00"
+},
+{
+"effect": "compressor",
+"field": "ratio",
+"value": 1.6875,
+"hex": "0f"
+},
+{
+"effect": "compressor",
+"field": "ratio",
+"value": 1.875,
+"hex": "1f"
+},
+{
+"effect": "compressor",
+"field": "ratio",
+"value": 2.0625,
+"hex": "2f"
+},
+{
+"effect": "compressor",
+"field": "ratio",
+"value": 2.25,
+"hex": "3f"
+},
+{
+"effect": "compressor",
+"field": "ratio",
+"value": 2.4375,
+"hex": "4f"
+},
+{
+"effect": "compressor",
+"field": "ratio",
+"value": 2.625,
+"hex": "5f"
+},
+{
+"effect": "compressor",
+"field": "ratio",
+"value": 2.8125,
+"hex": "6f"
+},
+{
+"effect": "compressor",
+"field": "ratio",
+"value": 3.0,
+"hex": "7f"
+},
+{
+"effect": "compressor",
+"field": "ratio",
+"value": 3.1875,
+"hex": "8f"
+},
+{
+"effect": "compressor",
+"field": "ratio",
+"value": 3.375,
+"hex": "9f"
+},
+{
+"effect": "compressor",
+"field": "ratio",
+"value": 3.5625,
+"hex": "af"
+},
+{
+"effect": "compressor",
+"field": "ratio",
+"value": 3.75,
+"hex": "bf"
+},
+{
+"effect": "compressor",
+"field": "ratio",
+"value": 3.9375,
+"hex": "cf"
+},
+{
+"effect": "compressor",
+"field": "ratio",
+"value": 4.125,
+"hex": "df"
+},
+{
+"effect": "compressor",
+"field": "ratio",
+"value": 4.3125,
+"hex": "ef"
+},
+{
+"effect": "compressor",
+"field": "ratio",
+"value": 4.5,
+"hex": "ff"
+},
+{
+"effect": "compressor",
+"field": "attack",
+"value": 0.1,
+"hex": "0040720d"
+},
+{
+"effect": "compressor",
+"field": "attack",
+"value": 0.71875,
+"hex": "cccc5600"
+},
+{
+"effect": "compressor",
+"field": "attack",
+"value": 1.3375,
+"hex": "51381f00"
+},
+{
+"effect": "compressor",
+"field": "attack",
+"value": 1.95625,
+"hex": "0a971000"
+},
+{
+"effect": "compressor",
+"field": "attack",
+"value": 2.575,
+"hex": "eb910a00"
+},
+{
+"effect": "compressor",
+"field": "attack",
+"value": 3.19375,
+"hex": "99590700"
+},
+{
+"effect": "compressor",
+"field": "attack",
+"value": 3.8125,
+"hex": "c2750500"
+},
+{
+"effect": "compressor",
+"field": "attack",
+"value": 4.43125,
+"hex": "0a570400"
+},
+{
+"effect": "compressor",
+"field": "attack",
+"value": 5.05,
+"hex": "aec70300"
+},
+{
+"effect": "compressor",
+"field": "attack",
+"value": 5.66875,
+"hex": "285c0300"
+},
+{
+"effect": "compressor",
+"field": "attack",
+"value": 6.2875,
+"hex": "a3f00200"
+},
+{
+"effect": "compressor",
+"field": "attack",
+"value": 6.90625,
+"hex": "0a970200"
+},
+{
+"effect": "compressor",
+"field": "attack",
+"value": 7.525,
+"hex": "703d0200"
+},
+{
+"effect": "compressor",
+"field": "attack",
+"value": 8.14375,
+"hex": "c2f50100"
+},
+{
+"effect": "compressor",
+"field": "attack",
+"value": 8.7625,
+"hex": "14ae0100"
+},
+{
+"effect": "compressor",
+"field": "attack",
+"value": 9.38125,
+"hex": "66660100"
+},
+{
+"effect": "compressor",
+"field": "attack",
+"value": 10.0,
+"hex": "b81e0100"
+},
+{
+"effect": "compressor",
+"field": "release",
+"value": 5.0,
+"hex": "00001e00"
+},
+{
+"effect": "compressor",
+"field": "release",
+"value": 17.1875,
+"hex": "19f10500"
+},
+{
+"effect": "compressor",
+"field": "release",
+"value": 29.375,
+"hex": "73fd0200"
+},
+{
+"effect": "compressor",
+"field": "release",
+"value": 41.5625,
+"hex": "14ed0100"
+},
+{
+"effect": "compressor",
+"field": "release",
+"value": 53.75,
+"hex": "3a640100"
+},
+{
+"effect": "compressor",
+"field": "release",
+"value": 65.9375,
+"hex": "c2150100"
+},
+{
+"effect": "compressor",
+"field": "release",
+"value": 78.125,
+"hex": "1ee10000"
+},
+{
+"effect": "compressor",
+"field": "release",
+"value": 90.3125,
+"hex": "8fbd0000"
+},
+{
+"effect": "compressor",
+"field": "release",
+"value": 102.5,
+"hex": "8ca50000"
+},
+{
+"effect": "compressor",
+"field": "release",
+"value": 114.6875,
+"hex": "e6900000"
+},
+{
+"effect": "compressor",
+"field": "release",
+"value": 126.875,
+"hex": "38810000"
+},
+{
+"effect": "compressor",
+"field": "release",
+"value": 139.0625,
+"hex": "51750000"
+},
+{
+"effect": "compressor",
+"field": "release",
+"value": 151.25,
+"hex": "ae6a0000"
+},
+{
+"effect": "compressor",
+"field": "release",
+"value": 163.4375,
+"hex": "3a610000"
+},
+{
+"effect": "compressor",
+"field": "release",
+"value": 175.625,
+"hex": "285a0000"
+},
+{
+"effect": "compressor",
+"field": "release",
+"value": 187.8125,
+"hex": "e8540000"
+},
+{
+"effect": "compressor",
+"field": "release",
+"value": 200.0,
+"hex": "e34e0000"
+},
+{
+"effect": "compressor",
+"field": "gain",
+"value": 0.0,
+"hex": "00000000"
+},
+{
+"effect": "compressor",
+"field": "gain",
+"value": 0.5625,
+"hex": "a8e0f004"
+},
+{
+"effect": "compressor",
+"field": "gain",
+"value": 1.125,
+"hex": "4f728709"
+},
+{
+"effect": "compressor",
+"field": "gain",
+"value": 1.6875,
+"hex": "dbbc710e"
+},
+{
+"effect": "compressor",
+"field": "gain",
+"value": 2.25,
+"hex": "120ebd13"
+},
+{
+"effect": "compressor",
+"field": "gain",
+"value": 2.8125,
+"hex": "40d65319"
+},
+{
+"effect": "compressor",
+"field": "gain",
+"value": 3.375,
+"hex": "21e17b1f"
+},
+{
+"effect": "compressor",
+"field": "gain",
+"value": 3.9375,
+"hex": "8e71c525"
+},
+{
+"effect": "compressor",
+"field": "gain",
+"value": 4.5,
+"hex": "f8f8842c"
+},
+{
+"effect": "compressor",
+"field": "gain",
+"value": 5.0625,
+"hex": "c3ec6533"
+},
+{
+"effect": "compressor",
+"field": "gain",
+"value": 5.625,
+"hex": "b325ab3a"
+},
+{
+"effect": "compressor",
+"field": "gain",
+"value": 6.1875,
+"hex": "10717342"
+},
+{
+"effect": "compressor",
+"field": "gain",
+"value": 6.75,
+"hex": "2e185c4b"
+},
+{
+"effect": "compressor",
+"field": "gain",
+"value": 7.3125,
+"hex": "56d0b454"
+},
+{
+"effect": "compressor",
+"field": "gain",
+"value": 7.875,
+"hex": "31b2645e"
+},
+{
+"effect": "compressor",
+"field": "gain",
+"value": 8.4375,
+"hex": "1dad6a69"
+},
+{
+"effect": "compressor",
+"field": "gain",
+"value": 9.0,
+"hex": "63b0e274"
+},
+{
+"effect": "gate",
+"field": "threshold",
+"value": -96.0,
+"hex": "f3840000"
+},
+{
+"effect": "gate",
+"field": "threshold",
+"value": -90.0,
+"hex": "45090100"
+},
+{
+"effect": "gate",
+"field": "threshold",
+"value": -84.0,
+"hex": "49110200"
+},
+{
+"effect": "gate",
+"field": "threshold",
+"value": -78.0,
+"hex": "10200400"
+},
+{
+"effect": "gate",
+"field": "threshold",
+"value": -72.0,
+"hex": "1f3b0800"
+},
+{
+"effect": "gate",
+"field": "threshold",
+"value": -66.0,
+"hex": "436c1000"
+},
+{
+"effect": "gate",
+"field": "threshold",
+"value": -60.0,
+"hex": "9bc42000"
+},
+{
+"effect": "gate",
+"field": "threshold",
+"value": -54.0,
+"hex": "79614100"
+},
+{
+"effect": "gate",
+"field": "threshold",
+"value": -48.0,
+"hex": "a6738200"
+},
+{
+"effect": "gate",
+"field": "threshold",
+"value": -42.0,
+"hex": "14490401"
+},
+{
+"effect": "gate",
+"field": "threshold",
+"value": -36.0,
+"hex": "7c560702"
+},
+{
+"effect": "gate",
+"field": "threshold",
+"value": -30.0,
+"hex": "10370c04"
+},
+{
+"effect": "gate",
+"field": "threshold",
+"value": -24.0,
+"hex": "60851308"
+},
+{
+"effect": "gate",
+"field": "threshold",
+"value": -18.0,
+"hex": "203f1d10"
+},
+{
+"effect": "gate",
+"field": "threshold",
+"value": -12.0,
+"hex": "00f32620"
+},
+{
+"effect": "gate",
+"field": "threshold",
+"value": -6.0,
+"hex": "00e72640"
+},
+{
+"effect": "gate",
+"field": "threshold",
+"value": 0.0,
+"hex": "ffffff7f"
+},
+{
+"effect": "gate",
+"field": "attack",
+"value": 0.1,
+"hex": "80eee54e"
+},
+{
+"effect": "gate",
+"field": "attack",
+"value": 62.59375,
+"hex": "767c3600"
+},
+{
+"effect": "gate",
+"field": "attack",
+"value": 125.0875,
+"hex": "b5461b00"
+},
+{
+"effect": "gate",
+"field": "attack",
+"value": 187.58125,
+"hex": "06311200"
+},
+{
+"effect": "gate",
+"field": "attack",
+"value": 250.075,
+"hex": "7aa50d00"
+},
+{
+"effect": "gate",
+"field": "attack",
+"value": 312.56875,
+"hex": "1feb0a00"
+},
+{
+"effect": "gate",
+"field": "attack",
+"value": 375.0625,
+"hex": "75190900"
+},
+{
+"effect": "gate",
+"field": "attack",
+"value": 437.55625,
+"hex": "cbcc0700"
+},
+{
+"effect": "gate",
+"field": "attack",
+"value": 500.05,
+"hex": "45d30600"
+},
+{
+"effect": "gate",
+"field": "attack",
+"value": 562.54375,
+"hex": "2e110600"
+},
+{
+"effect": "gate",
+"field": "attack",
+"value": 625.0375,
+"hex": "e6750500"
+},
+{
+"effect": "gate",
+"field": "attack",
+"value": 687.53125,
+"hex": "d8f60400"
+},
+{
+"effect": "gate",
+"field": "attack",
+"value": 750.025,
+"hex": "f68c0400"
+},
+{
+"effect": "gate",
+"field": "attack",
+"value": 812.51875,
+"hex": "5e330400"
+},
+{
+"effect": "gate",
+"field": "attack",
+"value": 875.0125,
+"hex": "91e60300"
+},
+{
+"effect": "gate",
+"field": "attack",
+"value": 937.50625,
+"hex": "02a40300"
+},
+{
+"effect": "gate",
+"field": "attack",
+"value": 1000.0,
+"hex": "c4690300"
+},
+{
+"effect": "gate",
+"field": "hold",
+"value": 1.0,
+"hex": "acaaaa02"
+},
+{
+"effect": "gate",
+"field": "hold",
+"value": 313.4375,
+"hex": "912d0200"
+},
+{
+"effect": "gate",
+"field": "hold",
+"value": 625.875,
+"hex": "3a170100"
+},
+{
+"effect": "gate",
+"field": "hold",
+"value": 938.3125,
+"hex": "40ba0000"
+},
+{
+"effect": "gate",
+"field": "hold",
+"value": 1250.75,
+"hex": "b98b0000"
+},
+{
+"effect": "gate",
+"field": "hold",
+"value": 1563.1875,
+"hex": "cc6f0000"
+},
+{
+"effect": "gate",
+"field": "hold",
+"value": 1875.625,
+"hex": "2c5d0000"
+},
+{
+"effect": "gate",
+"field": "hold",
+"value": 2188.0625,
+"hex": "de4f0000"
+},
+{
+"effect": "gate",
+"field": "hold",
+"value": 2500.5,
+"hex": "e4450000"
+},
+{
+"effect": "gate",
+"field": "hold",
+"value": 2812.9375,
+"hex": "203e0000"
+},
+{
+"effect": "gate",
+"field": "hold",
+"value": 3125.375,
+"hex": "ea370000"
+},
+{
+"effect": "gate",
+"field": "hold",
+"value": 3437.8125,
+"hex": "d5320000"
+},
+{
+"effect": "gate",
+"field": "hold",
+"value": 3750.25,
+"hex": "992e0000"
+},
+{
+"effect": "gate",
+"field": "hold",
+"value": 4062.6875,
+"hex": "042b0000"
+},
+{
+"effect": "gate",
+"field": "hold",
+"value": 4375.125,
+"hex": "f1270000"
+},
+{
+"effect": "gate",
+"field": "hold",
+"value": 4687.5625,
+"hex": "48250000"
+},
+{
+"effect": "gate",
+"field": "hold",
+"value": 5000.0,
+"hex": "f3220000"
+},
+{
+"effect": "gate",
+"field": "release",
+"value": 1.0,
+"hex": "acaaaa02"
+},
+{
+"effect": "gate",
+"field": "release",
+"value": 313.4375,
+"hex": "912d0200"
+},
+{
+"effect": "gate",
+"field": "release",
+"value": 625.875,
+"hex": "3a170100"
+},
+{
+"effect": "gate",
+"field": "release",
+"value": 938.3125,
+"hex": "40ba0000"
+},
+{
+"effect": "gate",
+"field": "release",
+"value": 1250.75,
+"hex": "b98b0000"
+},
+{
+"effect": "gate",
+"field": "release",
+"value": 1563.1875,
+"hex": "cc6f0000"
+},
+{
+"effect": "gate",
+"field": "release",
+"value": 1875.625,
+"hex": "2c5d0000"
+},
+{
+"effect": "gate",
+"field": "release",
+"value": 2188.0625,
+"hex": "de4f0000"
+},
+{
+"effect": "gate",
+"field": "release",
+"value": 2500.5,
+"hex": "e4450000"
+},
+{
+"effect": "gate",
+"field": "release",
+"value": 2812.9375,
+"hex": "203e0000"
+},
+{
+"effect": "gate",
+"field": "release",
+"value": 3125.375,
+"hex": "ea370000"
+},
+{
+"effect": "gate",
+"field": "release",
+"value": 3437.8125,
+"hex": "d5320000"
+},
+{
+"effect": "gate",
+"field": "release",
+"value": 3750.25,
+"hex": "992e0000"
+},
+{
+"effect": "gate",
+"field": "release",
+"value": 4062.6875,
+"hex": "042b0000"
+},
+{
+"effect": "gate",
+"field": "release",
+"value": 4375.125,
+"hex": "f1270000"
+},
+{
+"effect": "gate",
+"field": "release",
+"value": 4687.5625,
+"hex": "48250000"
+},
+{
+"effect": "gate",
+"field": "release",
+"value": 5000.0,
+"hex": "f3220000"
+},
+{
+"effect": "gate",
+"field": "range",
+"value": -96.0,
+"hex": "f3840000"
+},
+{
+"effect": "gate",
+"field": "range",
+"value": -90.0,
+"hex": "45090100"
+},
+{
+"effect": "gate",
+"field": "range",
+"value": -84.0,
+"hex": "49110200"
+},
+{
+"effect": "gate",
+"field": "range",
+"value": -78.0,
+"hex": "10200400"
+},
+{
+"effect": "gate",
+"field": "range",
+"value": -72.0,
+"hex": "1f3b0800"
+},
+{
+"effect": "gate",
+"field": "range",
+"value": -66.0,
+"hex": "436c1000"
+},
+{
+"effect": "gate",
+"field": "range",
+"value": -60.0,
+"hex": "9bc42000"
+},
+{
+"effect": "gate",
+"field": "range",
+"value": -54.0,
+"hex": "79614100"
+},
+{
+"effect": "gate",
+"field": "range",
+"value": -48.0,
+"hex": "a6738200"
+},
+{
+"effect": "gate",
+"field": "range",
+"value": -42.0,
+"hex": "14490401"
+},
+{
+"effect": "gate",
+"field": "range",
+"value": -36.0,
+"hex": "7c560702"
+},
+{
+"effect": "gate",
+"field": "range",
+"value": -30.0,
+"hex": "10370c04"
+},
+{
+"effect": "gate",
+"field": "range",
+"value": -24.0,
+"hex": "60851308"
+},
+{
+"effect": "gate",
+"field": "range",
+"value": -18.0,
+"hex": "203f1d10"
+},
+{
+"effect": "gate",
+"field": "range",
+"value": -12.0,
+"hex": "00f32620"
+},
+{
+"effect": "gate",
+"field": "range",
+"value": -6.0,
+"hex": "00e72640"
+},
+{
+"effect": "gate",
+"field": "range",
+"value": 0.0,
+"hex": "ffffff7f"
+},
+{
+"effect": "gate",
+"field": "hysteresis",
+"value": 1.0,
+"hex": "80821472"
+},
+{
+"effect": "gate",
+"field": "hysteresis",
+"value": 1.4375,
+"hex": "80f0796c"
+},
+{
+"effect": "gate",
+"field": "hysteresis",
+"value": 1.875,
+"hex": "00d62567"
+},
+{
+"effect": "gate",
+"field": "hysteresis",
+"value": 2.3125,
+"hex": "80bd1462"
+},
+{
+"effect": "gate",
+"field": "hysteresis",
+"value": 2.75,
+"hex": "005c435d"
+},
+{
+"effect": "gate",
+"field": "hysteresis",
+"value": 3.1875,
+"hex": "8090ae58"
+},
+{
+"effect": "gate",
+"field": "hysteresis",
+"value": 3.625,
+"hex": "80615354"
+},
+{
+"effect": "gate",
+"field": "hysteresis",
+"value": 4.0625,
+"hex": "80f92e50"
+},
+{
+"effect": "gate",
+"field": "hysteresis",
+"value": 4.5,
+"hex": "00a83e4c"
+},
+{
+"effect": "gate",
+"field": "hysteresis",
+"value": 4.9375,
+"hex": "00df7f48"
+},
+{
+"effect": "gate",
+"field": "hysteresis",
+"value": 5.375,
+"hex": "002ef044"
+},
+{
+"effect": "gate",
+"field": "hysteresis",
+"value": 5.8125,
+"hex": "00468d41"
+},
+{
+"effect": "gate",
+"field": "hysteresis",
+"value": 6.25,
+"hex": "c0f3543e"
+},
+{
+"effect": "gate",
+"field": "hysteresis",
+"value": 6.6875,
+"hex": "001f453b"
+},
+{
+"effect": "gate",
+"field": "hysteresis",
+"value": 7.125,
+"hex": "40cb5b38"
+},
+{
+"effect": "gate",
+"field": "hysteresis",
+"value": 7.5625,
+"hex": "00149735"
+},
+{
+"effect": "gate",
+"field": "hysteresis",
+"value": 8.0,
+"hex": "002df532"
+},
+{
+"effect": "exciter",
+"field": "mix",
+"value": 0.0,
+"hex": "0000000000"
+},
+{
+"effect": "exciter",
+"field": "mix",
+"value": 6.25,
+"hex": "001453010f"
+},
+{
+"effect": "exciter",
+"field": "mix",
+"value": 12.5,
+"hex": "005add021f"
+},
+{
+"effect": "exciter",
+"field": "mix",
+"value": 18.75,
+"hex": "00db84042f"
+},
+{
+"effect": "exciter",
+"field": "mix",
+"value": 25.0,
+"hex": "00464e063f"
+},
+{
+"effect": "exciter",
+"field": "mix",
+"value": 31.25,
+"hex": "00843f084f"
+},
+{
+"effect": "exciter",
+"field": "mix",
+"value": 37.5,
+"hex": "002f600a5f"
+},
+{
+"effect": "exciter",
+"field": "mix",
+"value": 43.75,
+"hex": "0048ba0c6f"
+},
+{
+"effect": "exciter",
+"field": "mix",
+"value": 50.0,
+"hex": "005f5b0f7f"
+},
+{
+"effect": "exciter",
+"field": "mix",
+"value": 56.25,
+"hex": "007456128f"
+},
+{
+"effect": "exciter",
+"field": "mix",
+"value": 62.5,
+"hex": "005ec7159f"
+},
+{
+"effect": "exciter",
+"field": "mix",
+"value": 68.75,
+"hex": "0043d919af"
+},
+{
+"effect": "exciter",
+"field": "mix",
+"value": 75.0,
+"hex": "006dd41ebf"
+},
+{
+"effect": "exciter",
+"field": "mix",
+"value": 81.25,
+"hex": "00624025cf"
+},
+{
+"effect": "exciter",
+"field": "mix",
+"value": 87.5,
+"hex": "005e4d2edf"
+},
+{
+"effect": "exciter",
+"field": "mix",
+"value": 93.75,
+"hex": "0015c63def"
+},
+{
+"effect": "exciter",
+"field": "mix",
+"value": 100.0,
+"hex": "ffffff7fff"
+},
+{
+"effect": "exciter",
+"field": "tune",
+"value": 600.0,
+"hex": "0000000b0000002400"
+},
+{
+"effect": "exciter",
+"field": "tune",
+"value": 875.0,
+"hex": "b66d9b0c000000240f"
+},
+{
+"effect": "exciter",
+"field": "tune",
+"value": 1150.0,
+"hex": "cb3d8d0e000000241f"
+},
+{
+"effect": "exciter",
+"field": "tune",
+"value": 1425.0,
+"hex": "f734c210000000242f"
+},
+{
+"effect": "exciter",
+"field": "tune",
+"value": 1700.0,
+"hex": "4f232c14232cf7243f"
+},
+{
+"effect": "exciter",
+"field": "tune",
+"value": 1975.0,
+"hex": "724f23194f232c274f"
+},
+{
+"effect": "exciter",
+"field": "tune",
+"value": 2250.0,
+"hex": "ee69841c000000285f"
+},
+{
+"effect": "exciter",
+"field": "tune",
+"value": 2525.0,
+"hex": "1a61b91e000000286f"
+},
+{
+"effect": "exciter",
+"field": "tune",
+"value": 2800.0,
+"hex": "ffff7f230000002a7f"
+},
+{
+"effect": "exciter",
+"field": "tune",
+"value": 3075.0,
+"hex": "dbb6ed284992a42c8f"
+},
+{
+"effect": "exciter",
+"field": "tune",
+"value": 3350.0,
+"hex": "b66d5b309224c9319f"
+},
+{
+"effect": "exciter",
+"field": "tune",
+"value": 3625.0,
+"hex": "e59e46374658ee38af"
+},
+{
+"effect": "exciter",
+"field": "tune",
+"value": 3900.0,
+"hex": "9e46583d58ee6943bf"
+},
+{
+"effect": "exciter",
+"field": "tune",
+"value": 4175.0,
+"hex": "b66ddb432449124fcf"
+},
+{
+"effect": "exciter",
+"field": "tune",
+"value": 4450.0,
+"hex": "6ddbb64a4992a45bdf"
+},
+{
+"effect": "exciter",
+"field": "tune",
+"value": 4725.0,
+"hex": "1a61b95308cb3d6def"
+},
+{
+"effect": "exciter",
+"field": "tune",
+"value": 5000.0,
+"hex": "00000054ffffff7fff"
+},
+{
+"effect": "bigbottom",
+"field": "drive",
+"value": 0.0,
+"hex": "0000000000"
+},
+{
+"effect": "bigbottom",
+"field": "drive",
+"value": 6.25,
+"hex": "001453010f"
+},
+{
+"effect": "bigbottom",
+"field": "drive",
+"value": 12.5,
+"hex": "005add021f"
+},
+{
+"effect": "bigbottom",
+"field": "drive",
+"value": 18.75,
+"hex": "00db84042f"
+},
+{
+"effect": "bigbottom",
+"field": "drive",
+"value": 25.0,
+"hex": "00464e063f"
+},
+{
+"effect": "bigbottom",
+"field": "drive",
+"value": 31.25,
+"hex": "00843f084f"
+},
+{
+"effect": "bigbottom",
+"field": "drive",
+"value": 37.5,
+"hex": "002f600a5f"
+},
+{
+"effect": "bigbottom",
+"field": "drive",
+"value": 43.75,
+"hex": "0048ba0c6f"
+},
+{
+"effect": "bigbottom",
+"field": "drive",
+"value": 50.0,
+"hex": "005f5b0f7f"
+},
+{
+"effect": "bigbottom",
+"field": "drive",
+"value": 56.25,
+"hex": "007456128f"
+},
+{
+"effect": "bigbottom",
+"field": "drive",
+"value": 62.5,
+"hex": "005ec7159f"
+},
+{
+"effect": "bigbottom",
+"field": "drive",
+"value": 68.75,
+"hex": "0043d919af"
+},
+{
+"effect": "bigbottom",
+"field": "drive",
+"value": 75.0,
+"hex": "006dd41ebf"
+},
+{
+"effect": "bigbottom",
+"field": "drive",
+"value": 81.25,
+"hex": "00624025cf"
+},
+{
+"effect": "bigbottom",
+"field": "drive",
+"value": 87.5,
+"hex": "005e4d2edf"
+},
+{
+"effect": "bigbottom",
+"field": "drive",
+"value": 93.75,
+"hex": "0015c63def"
+},
+{
+"effect": "bigbottom",
+"field": "drive",
+"value": 100.0,
+"hex": "ffffff7fff"
+},
+{
+"effect": "bigbottom",
+"field": "tune",
+"value": 60.0,
+"hex": "00"
+},
+{
+"effect": "bigbottom",
+"field": "tune",
+"value": 75.75,
+"hex": "0f"
+},
+{
+"effect": "bigbottom",
+"field": "tune",
+"value": 91.5,
+"hex": "1f"
+},
+{
+"effect": "bigbottom",
+"field": "tune",
+"value": 107.25,
+"hex": "2f"
+},
+{
+"effect": "bigbottom",
+"field": "tune",
+"value": 123.0,
+"hex": "3f"
+},
+{
+"effect": "bigbottom",
+"field": "tune",
+"value": 138.75,
+"hex": "4f"
+},
+{
+"effect": "bigbottom",
+"field": "tune",
+"value": 154.5,
+"hex": "5f"
+},
+{
+"effect": "bigbottom",
+"field": "tune",
+"value": 170.25,
+"hex": "6f"
+},
+{
+"effect": "bigbottom",
+"field": "tune",
+"value": 186.0,
+"hex": "7f"
+},
+{
+"effect": "bigbottom",
+"field": "tune",
+"value": 201.75,
+"hex": "8f"
+},
+{
+"effect": "bigbottom",
+"field": "tune",
+"value": 217.5,
+"hex": "9f"
+},
+{
+"effect": "bigbottom",
+"field": "tune",
+"value": 233.25,
+"hex": "af"
+},
+{
+"effect": "bigbottom",
+"field": "tune",
+"value": 249.0,
+"hex": "bf"
+},
+{
+"effect": "bigbottom",
+"field": "tune",
+"value": 264.75,
+"hex": "cf"
+},
+{
+"effect": "bigbottom",
+"field": "tune",
+"value": 280.5,
+"hex": "df"
+},
+{
+"effect": "bigbottom",
+"field": "tune",
+"value": 296.25,
+"hex": "ef"
+},
+{
+"effect": "bigbottom",
+"field": "tune",
+"value": 312.0,
+"hex": "ff"
+}
+]
