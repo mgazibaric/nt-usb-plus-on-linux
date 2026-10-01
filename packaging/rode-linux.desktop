@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=NT-USB+ Control
+Comment=Settings and audio processing of the RØDE NT-USB+
+Exec=rode-linux
+Icon=rode-linux
+Categories=AudioVideo;Audio;Settings;
+StartupWMClass=rode-linux
+Terminal=false
