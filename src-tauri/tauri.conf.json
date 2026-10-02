@@ -1,9 +1,9 @@
 {
   "$schema": "https://schema.tauri.app/config/2",
-  "productName": "rode-linux",
-  "mainBinaryName": "rode-linux",
+  "productName": "nt-usb-plus-on-linux",
+  "mainBinaryName": "nt-usb-plus-on-linux",
   "version": "0.1.0",
-  "identifier": "dev.rode-linux.control",
+  "identifier": "de.marvingazibaric.nt-usb-plus-on-linux",
   "build": {
     "beforeDevCommand": "pnpm dev",
     "devUrl": "http://localhost:1420",
@@ -38,7 +38,7 @@
         "section": "sound",
         "depends": ["libasound2"],
         "recommends": ["pipewire-bin | alsa-utils"],
-        "desktopTemplate": "../packaging/rode-linux.desktop",
+        "desktopTemplate": "../packaging/nt-usb-plus-on-linux.desktop",
         "files": {
           "/usr/lib/udev/rules.d/70-rode-nt-usb-plus.rules": "../udev/70-rode-nt-usb-plus.rules"
         },
@@ -47,7 +47,7 @@
       "rpm": {
         "depends": ["alsa-lib"],
         "recommends": ["pipewire-utils"],
-        "desktopTemplate": "../packaging/rode-linux.desktop",
+        "desktopTemplate": "../packaging/nt-usb-plus-on-linux.desktop",
         "files": {
           "/usr/lib/udev/rules.d/70-rode-nt-usb-plus.rules": "../udev/70-rode-nt-usb-plus.rules"
         },

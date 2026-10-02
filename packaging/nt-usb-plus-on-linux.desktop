@@ -2,8 +2,8 @@
 Type=Application
 Name=NT-USB+ Control
 Comment=Settings and audio processing of the RØDE NT-USB+
-Exec=rode-linux
-Icon=rode-linux
+Exec=nt-usb-plus-on-linux
+Icon=nt-usb-plus-on-linux
 Categories=AudioVideo;Audio;Settings;
-StartupWMClass=rode-linux
+StartupWMClass=nt-usb-plus-on-linux
 Terminal=false

@@ -1881,6 +1881,19 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "650eef8c711430f1a879fdd01d4745a7deea475becfb90269c06775983bbf086"
 
 [[package]]
+name = "nt-usb-plus-on-linux"
+version = "0.1.0"
+dependencies = [
+ "alsa",
+ "libc",
+ "serde",
+ "serde_json",
+ "tauri",
+ "tauri-build",
+ "ureq",
+]
+
+[[package]]
 name = "num-conv"
 version = "0.2.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -2531,19 +2544,6 @@ dependencies = [
  "libc",
  "untrusted",
  "windows-sys 0.52.0",
-]
-
-[[package]]
-name = "rode-linux"
-version = "0.1.0"
-dependencies = [
- "alsa",
- "libc",
- "serde",
- "serde_json",
- "tauri",
- "tauri-build",
- "ureq",
 ]
 
 [[package]]

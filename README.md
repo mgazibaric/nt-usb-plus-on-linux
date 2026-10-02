@@ -1,4 +1,4 @@
-# rode-linux
+# NT-USB+ on Linux
 
 Control a RØDE NT-USB+ on Linux without RØDE Central. Unofficial, not affiliated with RØDE.
 
@@ -45,15 +45,15 @@ Build the app (needs Rust, Node with pnpm, `webkit2gtk-4.1` and `alsa-lib`):
 ```sh
 pnpm install
 pnpm tauri dev                  # run with live reload
-pnpm tauri build --no-bundle    # release binary: src-tauri/target/release/rode-linux
+pnpm tauri build --no-bundle    # release binary: src-tauri/target/release/nt-usb-plus-on-linux
 ```
 
 To add it to the application menu:
 
 ```sh
-install -Dm755 src-tauri/target/release/rode-linux ~/.local/bin/rode-linux
-install -Dm644 packaging/rode-linux.desktop ~/.local/share/applications/rode-linux.desktop
-install -Dm644 src-tauri/icons/128x128.png ~/.local/share/icons/hicolor/128x128/apps/rode-linux.png
+install -Dm755 src-tauri/target/release/nt-usb-plus-on-linux ~/.local/bin/nt-usb-plus-on-linux
+install -Dm644 packaging/nt-usb-plus-on-linux.desktop ~/.local/share/applications/nt-usb-plus-on-linux.desktop
+install -Dm644 src-tauri/icons/128x128.png ~/.local/share/icons/hicolor/128x128/apps/nt-usb-plus-on-linux.png
 ```
 
 ## App
@@ -85,7 +85,7 @@ It never sends the firmware-update commands (HID report 2).
 If the window is ever drawn as black triangles (seen once on Intel graphics under Wayland, a WebKitGTK
 GPU-path problem), start the app with `WEBKIT_DISABLE_DMABUF_RENDERER=1` to use software rendering.
 
-`RODE_LINUX_DEBUG=1` prints every command sent to the backend on stderr. `pnpm dev` alone serves the UI
+`NT_USB_PLUS_DEBUG=1` prints every command sent to the backend on stderr. `pnpm dev` alone serves the UI
 with a simulated microphone at <http://localhost:1420>.
 
 ### Tests

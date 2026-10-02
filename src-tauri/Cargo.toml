@@ -1,12 +1,12 @@
 [package]
-name = "rode-linux"
+name = "nt-usb-plus-on-linux"
 version = "0.1.0"
 description = "Control panel for the RØDE NT-USB+ on Linux"
 edition = "2021"
 publish = false
 
 [lib]
-name = "rode_linux"
+name = "nt_usb_plus_on_linux"
 
 [build-dependencies]
 tauri-build = { version = "2", features = [] }

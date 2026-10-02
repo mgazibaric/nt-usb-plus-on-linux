@@ -55,7 +55,7 @@ fn recorder(card: u32) -> Command {
         cmd.args(["--raw", "--format", "s16", "--channels", "1", "--latency", "50ms"])
             .args(["--rate", &RATE.to_string(), "--target", &serial.to_string()])
             // Never fall back to another microphone when this one goes away.
-            .args(["-P", "{ node.name=rode-linux-meter application.name=\"NT-USB+ Control\" media.name=\"Level meter\" node.dont-reconnect=true }"])
+            .args(["-P", "{ node.name=nt-usb-plus-on-linux-meter application.name=\"NT-USB+ Control\" media.name=\"Level meter\" node.dont-reconnect=true }"])
             .arg("-");
         cmd
     } else {

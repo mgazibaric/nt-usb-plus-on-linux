@@ -3,7 +3,7 @@
 # Builds from the checkout this file is in:
 #   cd packaging/arch && makepkg -sic
 
-pkgname=rode-linux
+pkgname=nt-usb-plus-on-linux
 pkgver=0.1.0
 pkgrel=1
 pkgdesc='Control panel for the RØDE NT-USB+'
@@ -16,7 +16,7 @@ optdepends=('pipewire-audio: level meter and test recording through PipeWire'
 # ring is among the dependencies (TLS for the firmware check); Arch's Rust
 # packaging guidelines ask for !lto in that case
 options=('!lto')
-install=rode-linux.install
+install=nt-usb-plus-on-linux.install
 
 build() {
   cd "$startdir/../.."
@@ -28,13 +28,13 @@ build() {
 
 package() {
   cd "$startdir/../.."
-  install -Dm755 "$srcdir/target/release/rode-linux" "$pkgdir/usr/bin/rode-linux"
-  install -Dm644 packaging/rode-linux.desktop "$pkgdir/usr/share/applications/rode-linux.desktop"
+  install -Dm755 "$srcdir/target/release/nt-usb-plus-on-linux" "$pkgdir/usr/bin/nt-usb-plus-on-linux"
+  install -Dm644 packaging/nt-usb-plus-on-linux.desktop "$pkgdir/usr/share/applications/nt-usb-plus-on-linux.desktop"
   install -Dm644 udev/70-rode-nt-usb-plus.rules "$pkgdir/usr/lib/udev/rules.d/70-rode-nt-usb-plus.rules"
   local size
   for size in 32 64 128; do
-    install -Dm644 "src-tauri/icons/${size}x${size}.png" "$pkgdir/usr/share/icons/hicolor/${size}x${size}/apps/rode-linux.png"
+    install -Dm644 "src-tauri/icons/${size}x${size}.png" "$pkgdir/usr/share/icons/hicolor/${size}x${size}/apps/nt-usb-plus-on-linux.png"
   done
-  install -Dm644 'src-tauri/icons/128x128@2x.png' "$pkgdir/usr/share/icons/hicolor/256x256/apps/rode-linux.png"
-  install -Dm644 src-tauri/icons/icon.png "$pkgdir/usr/share/icons/hicolor/512x512/apps/rode-linux.png"
+  install -Dm644 'src-tauri/icons/128x128@2x.png' "$pkgdir/usr/share/icons/hicolor/256x256/apps/nt-usb-plus-on-linux.png"
+  install -Dm644 src-tauri/icons/icon.png "$pkgdir/usr/share/icons/hicolor/512x512/apps/nt-usb-plus-on-linux.png"
 }

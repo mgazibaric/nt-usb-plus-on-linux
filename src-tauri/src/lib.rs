@@ -101,11 +101,11 @@ struct RawEffect {
     params: Vec<Vec<u8>>,
 }
 
-/// Set RODE_LINUX_DEBUG=1 to trace commands on stderr.
+/// Set NT_USB_PLUS_DEBUG=1 to trace commands on stderr.
 fn trace(what: std::fmt::Arguments<'_>) {
     static ON: OnceLock<bool> = OnceLock::new();
-    if *ON.get_or_init(|| std::env::var_os("RODE_LINUX_DEBUG").is_some()) {
-        eprintln!("[rode-linux] {what}");
+    if *ON.get_or_init(|| std::env::var_os("NT_USB_PLUS_DEBUG").is_some()) {
+        eprintln!("[nt-usb-plus-on-linux] {what}");
     }
 }
 

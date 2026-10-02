@@ -2,5 +2,5 @@
 #![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
 
 fn main() {
-    rode_linux::run()
+    nt_usb_plus_on_linux::run()
 }
