@@ -1,0 +1,40 @@
+# Maintainer: Marvin Gazibarić
+#
+# Builds from the checkout this file is in:
+#   cd packaging/arch && makepkg -sic
+
+pkgname=rode-linux
+pkgver=0.1.0
+pkgrel=1
+pkgdesc='Control panel for the RØDE NT-USB+'
+arch=('x86_64' 'aarch64')
+url='https://github.com/mgazibaric/nt-usb-plus-on-linux'
+depends=('webkit2gtk-4.1' 'gtk3' 'alsa-lib')
+makedepends=('cargo' 'nodejs' 'pnpm')
+optdepends=('pipewire-audio: level meter and test recording through PipeWire'
+            'alsa-utils: level meter and test recording without PipeWire')
+# ring is among the dependencies (TLS for the firmware check); Arch's Rust
+# packaging guidelines ask for !lto in that case
+options=('!lto')
+install=rode-linux.install
+
+build() {
+  cd "$startdir/../.."
+  # Keep makepkg's compiler flags out of the checkout's own target directory.
+  export CARGO_TARGET_DIR="$srcdir/target"
+  pnpm install --frozen-lockfile
+  pnpm tauri build --no-bundle
+}
+
+package() {
+  cd "$startdir/../.."
+  install -Dm755 "$srcdir/target/release/rode-linux" "$pkgdir/usr/bin/rode-linux"
+  install -Dm644 packaging/rode-linux.desktop "$pkgdir/usr/share/applications/rode-linux.desktop"
+  install -Dm644 udev/70-rode-nt-usb-plus.rules "$pkgdir/usr/lib/udev/rules.d/70-rode-nt-usb-plus.rules"
+  local size
+  for size in 32 64 128; do
+    install -Dm644 "src-tauri/icons/${size}x${size}.png" "$pkgdir/usr/share/icons/hicolor/${size}x${size}/apps/rode-linux.png"
+  done
+  install -Dm644 'src-tauri/icons/128x128@2x.png' "$pkgdir/usr/share/icons/hicolor/256x256/apps/rode-linux.png"
+  install -Dm644 src-tauri/icons/icon.png "$pkgdir/usr/share/icons/hicolor/512x512/apps/rode-linux.png"
+}

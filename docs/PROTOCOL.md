@@ -113,8 +113,9 @@ and then param 3. RØDE Central shows no direct-monitor control for this mic.
 ### Inside the firmware
 
 Read from the disassembly of firmware 1.0.9; the routines for params 3 and 4
-were checked twice, the rest once. None of it has been confirmed by listening
-yet (`docs/TODO.md`).
+were checked twice, the rest once. Direct monitoring, the mix dial, the
+processed signal in the headphones and what a save keeps were confirmed on the
+mic on 2026-10-01, by ear and by replugging.
 
 - **Direct monitoring** works without a session. Param 3 is a flag the audio
   routine reads directly. Param 4 sets a gain of `66 * value / 100 − 60` dB for

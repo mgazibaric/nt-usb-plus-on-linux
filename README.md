@@ -4,11 +4,33 @@ Control a RØDE NT-USB+ on Linux without RØDE Central. Unofficial, not affiliat
 
 - `src/`, `src-tauri/` — the desktop app (Tauri 2, Svelte 5, Rust)
 - `docs/PROTOCOL.md` — the reverse-engineered HID protocol
-- `docs/TODO.md` — what is still untested or missing
 - `tools/rodectl.py` — reference command-line implementation (Python standard library only)
+- `tools/aphex_tables.json` — lookup tables for the effects, copied from RØDE Central (see
+  [Where the protocol comes from](#where-the-protocol-comes-from))
 - `udev/70-rode-nt-usb-plus.rules` — grants the logged-in user access to the control interface
+- `packaging/` — menu entry, Arch `PKGBUILD`, and what the .deb/.rpm bundles add
 
-## Setup
+## Install
+
+The packages contain the app, its menu entry and icon, and the udev rule that gives the logged-in
+user access to the mic's control interface.
+
+Arch, Manjaro (builds from this checkout; needs `cargo`, `nodejs` and `pnpm`):
+
+```sh
+cd packaging/arch
+makepkg -sic
+```
+
+Debian, Ubuntu, Fedora, openSUSE (needs Rust, Node with pnpm and the development packages of
+`webkit2gtk-4.1` and `alsa-lib`):
+
+```sh
+pnpm install
+pnpm tauri build    # src-tauri/target/release/bundle/deb/*.deb and rpm/*.rpm
+```
+
+## Without a package
 
 The control interface is only accessible to root until the udev rule is installed:
 
@@ -18,9 +40,7 @@ sudo udevadm control --reload
 sudo udevadm trigger --subsystem-match=hidraw --action=add
 ```
 
-## App
-
-Needs Rust, Node with pnpm, `webkit2gtk-4.1` and `alsa-lib`.
+Build the app (needs Rust, Node with pnpm, `webkit2gtk-4.1` and `alsa-lib`):
 
 ```sh
 pnpm install
@@ -35,6 +55,8 @@ install -Dm755 src-tauri/target/release/rode-linux ~/.local/bin/rode-linux
 install -Dm644 packaging/rode-linux.desktop ~/.local/share/applications/rode-linux.desktop
 install -Dm644 src-tauri/icons/128x128.png ~/.local/share/icons/hicolor/128x128/apps/rode-linux.png
 ```
+
+## App
 
 What it does:
 
@@ -88,3 +110,17 @@ tools/rodectl.py save          # persist on the mic
 
 Mic gain and headphone volume are ordinary ALSA controls
 (`amixer -c NTUSB`), not part of the HID protocol.
+
+## Where the protocol comes from
+
+RØDE publishes no documentation for the mic's control interface. The protocol was worked out for
+interoperability, by watching the mic's answers and by reading RØDE Central, RØDE's own app;
+`docs/PROTOCOL.md` is this project's description of it.
+
+One file is not this project's own work: `tools/aphex_tables.json` holds seven tables of 256 numbers
+each, copied unchanged from RØDE Central. The mic's effects take raw DSP values, and the tables
+translate a setting such as a threshold in dB into the value the mic expects. They remain RØDE's
+data.
+
+RØDE, NT-USB+, Aphex, Aural Exciter and Big Bottom are trademarks of their respective owners. This
+project is not affiliated with or endorsed by them.

@@ -1,0 +1,9 @@
+# pacman reloads the udev rules itself; this applies them to a mic that is
+# already plugged in.
+post_install() {
+  udevadm trigger --subsystem-match=hidraw --action=add || true
+}
+
+post_upgrade() {
+  post_install
+}
