@@ -41,6 +41,8 @@ export const setGain = (value: number) => call<Gain>('set_gain', { value });
 export const save = () => call<void>('save');
 /** Go back to the settings from when the app connected or last saved. */
 export const revert = () => call<Snapshot>('revert');
+/** Write RØDE's factory settings to the mic and save them there. */
+export const factoryReset = () => call<Snapshot>('factory_reset');
 /** Record from the mic into memory, for up to 30 s; ends with `testStop`. */
 export const testRecord = () => call<void>('test_record');
 /** Returns the length of the recording in seconds. */

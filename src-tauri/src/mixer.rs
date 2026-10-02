@@ -1,6 +1,7 @@
 //! Input gain. It is a standard USB Audio control, not part of the HID protocol.
 
-use alsa::mixer::{Mixer, Selem, SelemChannelId, SelemId};
+use alsa::mixer::{MilliBel, Mixer, Selem, SelemChannelId, SelemId};
+use alsa::Round;
 use serde::Serialize;
 
 use crate::error::{Error, Result};
@@ -42,6 +43,13 @@ pub fn set_gain(card: u32, value: i64) -> Result<Gain> {
     with_mic(card, |selem| {
         let (min, max) = selem.get_capture_volume_range();
         selem.set_capture_volume_all(value.clamp(min, max)).map_err(err)?;
+        read(selem)
+    })
+}
+
+pub fn set_gain_db(card: u32, db: f32) -> Result<Gain> {
+    with_mic(card, |selem| {
+        selem.set_capture_db_all(MilliBel::from_db(db), Round::Floor).map_err(err)?;
         read(selem)
     })
 }

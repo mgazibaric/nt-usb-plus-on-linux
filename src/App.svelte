@@ -21,6 +21,8 @@
   let dirty = $state(false);
   let saving = $state(false);
   let reverting = $state(false);
+  let resetting = $state(false);
+  let resetDialog = $state<HTMLDialogElement>();
   /** Counts changes, to notice one that arrives while saving or resetting */
   let edits = 0;
   /** What "Reset" goes back to: the settings at connect or at the last save */
@@ -191,6 +193,27 @@
     }
   }
 
+  /** Put RØDE's factory settings on the mic for good; they are the saved settings afterwards. */
+  async function factoryReset() {
+    resetDialog?.close();
+    if (!mic) return;
+    resetting = true;
+    try {
+      await queue.idle();
+      const fresh = await api.factoryReset();
+      if (mic) mic = fresh;
+      baseline = $state.snapshot(fresh);
+      dirty = false;
+      notify('Factory settings restored');
+    } catch (error) {
+      // The mic may be left partly reset and not saved.
+      dirty = true;
+      fail(error);
+    } finally {
+      resetting = false;
+    }
+  }
+
   async function record() {
     try {
       await api.testRecord();
@@ -296,6 +319,16 @@
         </p>
       {/if}
 
+      <button
+        class="ghost small factory"
+        type="button"
+        disabled={saving || reverting || resetting}
+        onclick={() => resetDialog?.showModal()}
+        title="Put the microphone back to RØDE's factory settings"
+      >
+        {resetting ? 'Resetting…' : 'Factory Reset'}
+      </button>
+
       <section class="level">
         <div class="level-head">
           <h2>Level Meter</h2>
@@ -314,7 +347,7 @@
     <footer>Unofficial tool, not affiliated with RØDE.</footer>
   </aside>
 
-  <main inert={reverting}>
+  <main inert={reverting || resetting}>
     {#if mic && shownState}
       <header>
         <div>
@@ -324,11 +357,11 @@
         <div class="save">
           {#if dirty}
             <span class="unsaved">Unsaved changes</span>
-            <button class="ghost" type="button" disabled={saving || reverting} onclick={revert} title="Discard the unsaved changes and go back to the last saved settings">
+            <button class="ghost" type="button" disabled={saving || reverting || resetting} onclick={revert} title="Discard the unsaved changes and go back to the last saved settings">
               Reset
             </button>
           {/if}
-          <button class="primary" type="button" class:attention={dirty} disabled={saving || reverting} onclick={save} title="Store the current settings on the microphone">
+          <button class="primary" type="button" class:attention={dirty} disabled={saving || reverting || resetting} onclick={save} title="Store the current settings on the microphone">
             {saving ? 'Saving…' : 'Save To Microphone'}
           </button>
         </div>
@@ -499,6 +532,16 @@ sudo udevadm trigger --subsystem-match=hidraw --action=add</pre>
     {/if}
   </main>
 
+  <dialog bind:this={resetDialog} aria-labelledby="reset-title">
+    <h2 id="reset-title">Factory reset?</h2>
+    <p>All settings go back to RØDE's defaults and are saved to the microphone. Your current settings will be lost.</p>
+    <div class="actions">
+      <!-- svelte-ignore a11y_autofocus -->
+      <button class="ghost" type="button" autofocus onclick={() => resetDialog?.close()}>Cancel</button>
+      <button class="primary" type="button" onclick={factoryReset}>Factory Reset</button>
+    </div>
+  </dialog>
+
   {#if toast}
     <div class="toast" class:error={toast.error} role="status">{toast.text}</div>
   {/if}
@@ -605,6 +648,9 @@ sudo udevadm trigger --subsystem-match=hidraw --action=add</pre>
     display: block;
     color: var(--text);
     font-weight: 600;
+  }
+  .factory {
+    align-self: center;
   }
   footer {
     margin-top: auto;
@@ -891,6 +937,38 @@ sudo udevadm trigger --subsystem-match=hidraw --action=add</pre>
     user-select: text;
     -webkit-user-select: text;
     cursor: text;
+  }
+
+  dialog {
+    width: 400px;
+    max-width: calc(100% - 40px);
+    padding: 22px 24px 20px;
+    background: var(--card);
+    color: var(--text);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    box-shadow: 0 16px 50px rgb(0 0 0 / 0.6);
+  }
+  dialog[open] {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  dialog::backdrop {
+    background: rgb(0 0 0 / 0.6);
+  }
+  dialog h2 {
+    font-size: 17px;
+  }
+  dialog p {
+    font-size: 13px;
+    color: var(--muted);
+  }
+  .actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 6px;
   }
 
   .toast {

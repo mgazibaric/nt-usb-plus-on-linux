@@ -33,6 +33,10 @@ pub const P_MONITOR_MIX: u8 = 4;
 pub const P_SAVE: u8 = 10;
 
 pub const HPF_MAX: u8 = 2;
+
+// What RØDE Central's factory reset sets besides the effects
+pub const FACTORY_HPF: u8 = 0;
+pub const FACTORY_GAIN_DB: f32 = 12.0;
 pub const MONITOR_MIX_MAX: u8 = 100;
 
 // Report 4 operations (granular only; the NT-USB+ does not use set-all/get-all)
@@ -90,6 +94,8 @@ pub struct Field {
 pub struct Effect {
     pub name: &'static str,
     pub fx: u8,
+    /// Whether RØDE Central's factory reset leaves the effect switched on
+    pub factory_on: bool,
     /// Parameter 0 (enabled) is implicit.
     pub fields: &'static [Field],
 }
@@ -103,6 +109,7 @@ pub static EFFECTS: [Effect; 4] = [
     Effect {
         name: "compressor",
         fx: 0,
+        factory_on: true,
         fields: &[
             field("threshold", 1, -60.0, 0.0, -25.0, Codec::CompThreshold),
             field("ratio", 2, 1.5, 4.5, 2.0, Codec::CompRatio),
@@ -114,6 +121,7 @@ pub static EFFECTS: [Effect; 4] = [
     Effect {
         name: "gate",
         fx: 1,
+        factory_on: false,
         fields: &[
             field("threshold", 1, -96.0, 0.0, -40.0, Codec::GateLevel),
             field("attack", 2, 0.1, 1000.0, 30.0, Codec::GateAttack),
@@ -126,6 +134,7 @@ pub static EFFECTS: [Effect; 4] = [
     Effect {
         name: "exciter",
         fx: 2,
+        factory_on: true,
         fields: &[
             field("mix", 1, 0.0, 100.0, 85.0, Codec::ExciterMix),
             field("tune", 2, 600.0, 5000.0, 3500.0, Codec::ExciterTune),
@@ -134,6 +143,7 @@ pub static EFFECTS: [Effect; 4] = [
     Effect {
         name: "bigbottom",
         fx: 3,
+        factory_on: true,
         fields: &[
             field("drive", 1, 0.0, 100.0, 80.0, Codec::BottomDrive),
             field("tune", 2, 60.0, 312.0, 90.0, Codec::BottomTune),
@@ -251,6 +261,11 @@ impl Field {
 
     /// User-unit value of a reply payload, clamped to the field's range.
     pub fn decode(&self, reply: &[u8]) -> f64 {
+        // The lookup tables are coarse (3500 Hz is stored as the entry for
+        // 3499 Hz); what was written as the default reads as the default.
+        if reply.get(..self.width()) == Some(&self.encode(self.default)[..]) {
+            return self.default;
+        }
         let t = &*TABLES;
         let raw = le32(reply);
         let v = match self.codec {
@@ -339,6 +354,15 @@ mod tests {
         for e in &EFFECTS {
             for f in e.fields {
                 assert_eq!(f.encode(f.default).len(), f.width(), "{}.{}", e.name, f.name);
+            }
+        }
+    }
+
+    #[test]
+    fn the_default_reads_back_exactly() {
+        for e in &EFFECTS {
+            for f in e.fields {
+                assert_eq!(f.decode(&f.encode(f.default)), f.default, "{}.{}", e.name, f.name);
             }
         }
     }

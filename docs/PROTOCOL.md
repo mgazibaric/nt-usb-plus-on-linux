@@ -311,8 +311,12 @@ for those is shared with other mics and other RØDE apps.
 3. "Save to microphone" writes param 10.
 4. Factory reset is done by the app with ordinary writes: input level 12 dB,
    high-pass off, the defaults from the effect tables above, then gate off and
-   compressor, Big Bottom and Aural Exciter on. (Read from
-   `factoryResetDeviceWithSessionInfo`; not tested.)
+   compressor, Big Bottom and Aural Exciter on. The routine sends no save
+   and nothing for direct monitoring; the mic has no reset command of its
+   own. (Read from `factoryResetDeviceWithSessionInfo`; not tested.) The
+   mic this was tested on had all four effects off when first read, with
+   only the gate values stored, so the three switches are RØDE Central's
+   choice, not the state the mic ships in.
 
 Settings are active as soon as they are written. Only a save (step 3) makes
 them survive a power cycle (seen on 2026-10-01: unsaved effect settings were

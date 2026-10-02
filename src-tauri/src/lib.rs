@@ -20,7 +20,7 @@ use error::{Error, Result};
 use meter::Meter;
 use mixer::Gain;
 use player::Player;
-use protocol::{Effect, EFFECTS, HPF_MAX, MONITOR_MIX_MAX, P_HPF, P_MONITOR, P_MONITOR_MIX};
+use protocol::{Effect, EFFECTS, FACTORY_GAIN_DB, FACTORY_HPF, HPF_MAX, MONITOR_MIX_MAX, P_HPF, P_MONITOR, P_MONITOR_MIX};
 
 const WATCH_INTERVAL: Duration = Duration::from_secs(1);
 
@@ -406,6 +406,40 @@ fn revert(app: AppHandle) -> CommandResult<Snapshot> {
     })
 }
 
+/// Write what RØDE Central's factory reset gives an NT-USB+ and save it. The
+/// mic has no reset command of its own; these are ordinary writes.
+#[tauri::command(async)]
+fn factory_reset(app: AppHandle) -> CommandResult<Snapshot> {
+    trace(format_args!("factory_reset"));
+    let (snapshot, raw) = with_device(&app, |dev| {
+        if let Some(card) = dev.info.card {
+            mixer::set_gain_db(card, FACTORY_GAIN_DB)?;
+        }
+        dev.set_param(P_HPF, FACTORY_HPF)?;
+        let mut effects = Vec::with_capacity(EFFECTS.len());
+        for effect in &EFFECTS {
+            write_defaults(dev, effect)?;
+            let params = effect.fields.iter().map(|f| f.encode(f.default)).collect();
+            effects.push(RawEffect { enabled: effect.factory_on as u8, params });
+        }
+        for effect in &EFFECTS {
+            dev.fx_set(effect.fx, 0, &[effect.factory_on as u8])?;
+        }
+        dev.save()?;
+        dev.written.clear();
+        let (monitor, monitor_mix) = (dev.get_param(P_MONITOR)?, dev.get_param(P_MONITOR_MIX)?);
+        dev.monitor_seen = Some((monitor, monitor_mix));
+        // Every write was acknowledged, so this is what the mic holds now.
+        let raw = Raw { hpf: FACTORY_HPF, monitor, monitor_mix, effects };
+        Ok((snapshot(dev, &raw), raw))
+    })?;
+    let shared = app.state::<Shared>();
+    let mut inner = shared.lock();
+    inner.gain_seen = snapshot.gain.map(|g| g.value);
+    inner.baseline = Some(raw);
+    Ok(snapshot)
+}
+
 /// Start a test recording. It ends with `test_stop`, or stops growing after
 /// `meter::MAX_SECONDS`.
 #[tauri::command(async)]
@@ -550,6 +584,7 @@ pub fn run() {
             set_gain,
             save,
             revert,
+            factory_reset,
             set_meter,
             test_record,
             test_stop,

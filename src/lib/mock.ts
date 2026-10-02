@@ -61,6 +61,15 @@ const commands: Record<string, (args: any) => unknown> = {
     Object.assign(mic, { hpf, monitor, monitor_mix, effects });
     return structuredClone(mic);
   },
+  factory_reset: (): Snapshot => {
+    mic.hpf = 0;
+    Object.assign(mic.gain!, { value: 12 });
+    for (const id of Object.keys(DEFAULTS) as EffectId[]) {
+      mic.effects[id] = { enabled: id !== 'gate', unset: false, values: { ...DEFAULTS[id] } };
+    }
+    saved = structuredClone(mic);
+    return structuredClone(mic);
+  },
   set_meter: ({ on }) => void (metering = on),
   test_record: () => void (recordingSince = Date.now()),
   test_stop: () => (taken = (Date.now() - recordingSince) / 1000),

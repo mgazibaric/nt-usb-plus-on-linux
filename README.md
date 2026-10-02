@@ -42,6 +42,9 @@ What it does:
   with all their parameters. Changes apply immediately; "Save To Microphone" stores them on the mic.
   While there are unsaved changes, "Reset" goes back to the settings from the last save (or from when
   the app connected, if nothing was saved since). "Defaults" loads the default values of one effect.
+- "Factory Reset" writes the settings RØDE Central's factory reset writes (input level +12 dB,
+  high-pass off, all effect values at their defaults, noise gate off and the other three effects on)
+  and saves them to the mic. It asks first; afterwards the previous settings are gone.
 - Direct monitoring is a live control like the gain: the mic does not store it. The Mix slider and
   the mix dial on the mic set the same value; the card says which of the two set it last.
 - Input gain. This is the mic's ALSA capture volume, the same control your desktop's sound settings use.
