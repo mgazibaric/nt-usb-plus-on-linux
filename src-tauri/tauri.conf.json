@@ -30,6 +30,8 @@
     "targets": ["deb", "rpm"],
     "icon": ["icons/32x32.png", "icons/64x64.png", "icons/128x128.png", "icons/128x128@2x.png", "icons/icon.png"],
     "publisher": "Marvin Gazibarić",
+    "license": "MIT",
+    "licenseFile": "../LICENSE",
     "homepage": "https://github.com/mgazibaric/nt-usb-plus-on-linux",
     "shortDescription": "Control panel for the RØDE NT-USB+",
     "longDescription": "Settings and audio processing of the RØDE NT-USB+ microphone: input level, high-pass filter, direct monitoring, noise gate, compressor, Aural Exciter and Big Bottom. Unofficial, not affiliated with RØDE.",
@@ -40,7 +42,8 @@
         "recommends": ["pipewire-bin | alsa-utils"],
         "desktopTemplate": "../packaging/nt-usb-plus-on-linux.desktop",
         "files": {
-          "/usr/lib/udev/rules.d/70-rode-nt-usb-plus.rules": "../udev/70-rode-nt-usb-plus.rules"
+          "/usr/lib/udev/rules.d/70-rode-nt-usb-plus.rules": "../udev/70-rode-nt-usb-plus.rules",
+          "/usr/share/doc/nt-usb-plus-on-linux/copyright": "../LICENSE"
         },
         "postInstallScript": "../packaging/udev-reload.sh"
       },
@@ -49,7 +52,8 @@
         "recommends": ["pipewire-utils"],
         "desktopTemplate": "../packaging/nt-usb-plus-on-linux.desktop",
         "files": {
-          "/usr/lib/udev/rules.d/70-rode-nt-usb-plus.rules": "../udev/70-rode-nt-usb-plus.rules"
+          "/usr/lib/udev/rules.d/70-rode-nt-usb-plus.rules": "../udev/70-rode-nt-usb-plus.rules",
+          "/usr/share/licenses/nt-usb-plus-on-linux/LICENSE": "../LICENSE"
         },
         "postInstallScript": "../packaging/udev-reload.sh"
       }

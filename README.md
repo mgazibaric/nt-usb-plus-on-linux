@@ -124,3 +124,8 @@ data.
 
 RØDE, NT-USB+, Aphex, Aural Exciter and Big Bottom are trademarks of their respective owners. This
 project is not affiliated with or endorsed by them.
+
+## Licence
+
+MIT, see `LICENSE`. It covers this project's code and documentation, not
+`tools/aphex_tables.json`.

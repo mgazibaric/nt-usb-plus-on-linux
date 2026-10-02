@@ -3,6 +3,7 @@ name = "nt-usb-plus-on-linux"
 version = "0.1.0"
 description = "Control panel for the RØDE NT-USB+ on Linux"
 edition = "2021"
+license = "MIT"
 publish = false
 
 [lib]
